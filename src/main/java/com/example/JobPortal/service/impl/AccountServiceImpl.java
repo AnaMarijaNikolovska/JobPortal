@@ -82,5 +82,8 @@ public class AccountServiceImpl implements AccountService {
         account.setSurname(accountDto.getSurname());
         account.setMail(accountDto.getMail());
         account.setPhoneNumber(accountDto.getPhoneNumber());
+        account.setAboutAccount(accountDto.getAboutAccount());
+        account.setCompanyName(accountDto.getCompanyName());
+        account.setSince(accountDto.getSince());
     }
 }

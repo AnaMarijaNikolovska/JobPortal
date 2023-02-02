@@ -12,11 +12,12 @@ public class AccountDto {
     String password;
     @NotBlank
     String mail;
-    @NotBlank
     String name;
-    @NotBlank
     String surname;
     String phoneNumber;
     @NotBlank
     boolean isCompany;
+    String aboutAccount;
+    String companyName;
+    String since;
 }

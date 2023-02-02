@@ -23,7 +23,11 @@ public class Account implements UserDetails {
     String mail;
     String name;
     String surname;
+    String aboutAccount;
     String phoneNumber;
+    String companyName;
+    String since;
+
     @Lob
     byte[] picture;
     boolean isCompany;
