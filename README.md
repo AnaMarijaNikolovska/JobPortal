@@ -6,10 +6,12 @@ JobPortal is a website that helps job seekers and companies connect. JobPortal g
 
 ## Backend:
 Made with Java SpringBoot. Some of the functionalities:
-- Two types od users (people and company)-> When  you are creating your profile you can choose if you want your account to be personal(if you want to look for a job) or professional(if you want to post a job offer). After choosing that you also have to add some information about yourself, like: name, surname, e-mail, phone number etc.
+- Two types od users (people and company)->When  you are creating your profile you can choose if you want your account to be personal(if you want to look for a job) or professional(if you want to post a job offer). After choosing that you also have to add some information about yourself, like: name, surname, e-mail, phone number etc.
 - Management of job posts (full CRUD operations related to them) -> If your account is of a company type you can make posts about open possitions in your company, edit your posts and also you can delete them. If your account is of a person type account you can only read the posts.
-- Filtering job posts based on category and industry. ->
+- Filtering job posts based on category. -> If you are looking for a job in a specific industry, you can search all job post in a specific catagory, ex. law, it etc.
+- 
 
 
 ## Frontend:
 Made with React Bootstrap and basic CSS.
+

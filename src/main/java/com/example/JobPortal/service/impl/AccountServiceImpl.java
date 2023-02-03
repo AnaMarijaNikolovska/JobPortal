@@ -5,6 +5,7 @@ import com.example.JobPortal.model.dto.AccountDto;
 import com.example.JobPortal.model.dto.LogInDto;
 import com.example.JobPortal.repository.AccountRepository;
 import com.example.JobPortal.service.AccountService;
+import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
@@ -72,6 +73,11 @@ public class AccountServiceImpl implements AccountService {
     //TODO
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+//        Account account = accountRepository.getByUsernameAndPassword(username,password)
+//                .orElseGet(() -> accountRepository.findByEmail(mail)
+//                        .orElseThrow(() -> new UsernameNotFoundException("User Name is not Found")));
+//
+//        AuthorityUtils.createAuthorityList(String.valueOf(account.);
         return null;
     }
 
