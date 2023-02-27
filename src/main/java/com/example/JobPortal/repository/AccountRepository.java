@@ -10,12 +10,12 @@ import java.util.Optional;
 
 @Repository
 public interface AccountRepository extends JpaRepository<Account,String> {
-    @Query("SELECT account " +
-            "FROM Account account" +
-            "WHERE account.deletedOn IS NULL " +
-            "   AND (account.username = :username OR account.email = :username)" +
-            "   AND account.password = :password ")
-    Optional<Account> getByUsername(String username);
+//    @Query("SELECT account " +
+//            "FROM Account account" +
+//            "WHERE account.deletedOn IS NULL " +
+//            "   AND (account.username = :username OR account.email = :username)" +
+//            "   AND account.password = :password ")
+//    Optional<Account> getByUsername(String username);
     Optional<Account> findByUsername(String username);
 
     Optional<Account> findByEmail(String mail);
