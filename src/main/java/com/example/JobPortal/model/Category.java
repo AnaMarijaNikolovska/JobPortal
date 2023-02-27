@@ -1,6 +1,6 @@
 package com.example.JobPortal.model;
 
-import com.example.JobPortal.model.enums.MainCategory;
+import com.example.JobPortal.model.enums.Industry;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,7 +19,7 @@ public class Category {
     String name;
     String description;
     @Enumerated(value = EnumType.STRING)
-    MainCategory mainCategory;
+    Industry industry;
     @OneToMany
     List<JobPost> jobPostList;
 

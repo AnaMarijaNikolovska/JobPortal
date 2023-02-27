@@ -1,10 +1,8 @@
 package com.example.JobPortal.service.impl;
 
-import com.example.JobPortal.model.Account;
 import com.example.JobPortal.model.Category;
-import com.example.JobPortal.model.dto.AccountDto;
 import com.example.JobPortal.model.dto.CategoryDto;
-import com.example.JobPortal.model.enums.MainCategory;
+import com.example.JobPortal.model.enums.Industry;
 import com.example.JobPortal.repository.CategoryRepository;
 import com.example.JobPortal.service.CategoryService;
 import org.springframework.stereotype.Service;
@@ -26,8 +24,8 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public List<Category> getAllByMainCategory(String mainCategory) {
-        return categoryRepository.findAllByMainCategory(mainCategory);
+    public List<Category> findAllCategoriesByIndustry(String industry) {
+        return categoryRepository.findAllCategoriesByIndustry(industry);
     }
 
     @Override
@@ -65,7 +63,7 @@ public class CategoryServiceImpl implements CategoryService {
         category.setName(categoryDto.getName());
         category.setDescription(categoryDto.getDescription());
 
-        MainCategory mainCategory = MainCategory.valueOf(categoryDto.getMainCategory());
-        category.setMainCategory(mainCategory);
+        Industry industry = Industry.valueOf(categoryDto.getMainCategory());
+        category.setIndustry(industry);
     }
 }

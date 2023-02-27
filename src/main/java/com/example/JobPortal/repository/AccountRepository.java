@@ -15,7 +15,7 @@ public interface AccountRepository extends JpaRepository<Account,String> {
             "WHERE account.deletedOn IS NULL " +
             "   AND (account.username = :username OR account.email = :username)" +
             "   AND account.password = :password ")
-    Optional<Account> getByUsernameAndPassword(String username, String password);
+    Optional<Account> getByUsername(String username);
     Optional<Account> findByUsername(String username);
 
     Optional<Account> findByEmail(String mail);

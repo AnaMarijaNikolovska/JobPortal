@@ -45,6 +45,6 @@ public class CategoryController {
 
     @GetMapping("/main/{mainCategory}")
     public List<Category> getAllCategoriesByMainCategory(@PathVariable String mainCategory) {
-        return categoryService.getAllByMainCategory(mainCategory);
+        return categoryService.findAllCategoriesByIndustry(mainCategory);
     }
 }

@@ -13,9 +13,10 @@ import java.util.Optional;
 public interface AccountService extends UserDetailsService {
     List<Account> getAllAccounts();
 
+    //TODO maybe "getOneAccount" is same as "getAccountByUsername"
     Optional<Account> getOneAccount(String username);
 
-    Optional<Account> getAccountByUsernameAndPassword(LogInDto loginDto);
+    Optional<Account> getAccountByUsername(String username);
 
     Account saveAccount(AccountDto accountDto, MultipartFile picture) throws IOException;
 

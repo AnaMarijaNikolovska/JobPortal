@@ -23,29 +23,34 @@ public class JobPostController {
     public List<JobPost> findAllJobPosts() {
         return jobPostService.findAllJobPosts();
     }
+
     @GetMapping("/id")
     public Optional<JobPost> findOneJobPost(@PathVariable Long id){
         return jobPostService.findOneJobPost(id);
     }
+
     @GetMapping("/{categoryId}")
     public List<JobPost> findAllJobPostsByCategory(@PathVariable String categoryId){
         return jobPostService.findAllJobPostsByCategory(categoryId);
     }
 
-    @GetMapping("/{mainCategory}")
-    public List<JobPost> findAllJobPostsByMainCategory(@PathVariable String mainCategory){
-        return jobPostService.findAllJobPostsByMainCategory(mainCategory);
+    @GetMapping("/{industry}")
+    public List<JobPost> findAllJobPostsByIndustry(@PathVariable String industry){
+        return jobPostService.findAllJobPostsByIndustry(industry);
     }
+
     @PostMapping()
     public JobPost addJobPost(@RequestPart JobPostDto jobPostDto, @RequestPart MultipartFile picture)
             throws IOException{
         return jobPostService.addJobPost(jobPostDto,picture);
     }
+
     @PutMapping("/{id}")
     public JobPost editJobPost(@PathVariable Long id, @RequestPart JobPostDto jobPostDto,
                                @RequestPart MultipartFile picture) throws IOException{
         return jobPostService.editJobPost(id, jobPostDto, picture);
     }
+
     @DeleteMapping("/{id}")
     public void deleteJobPost(@PathVariable Long id){
         jobPostService.deleteJobPost(id);

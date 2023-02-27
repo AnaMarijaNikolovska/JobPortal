@@ -12,5 +12,5 @@ public interface JobPostRepository extends JpaRepository<JobPost,Long> {
     @Transactional
     List<JobPost> findAllJobPostsByCategory(String categoryId);
     @Transactional
-    List<JobPost> findAllJobPostsByMainCategory(String mainCategory);
+    List<JobPost> findAllJobPostsByIndustry(String industry);
 }

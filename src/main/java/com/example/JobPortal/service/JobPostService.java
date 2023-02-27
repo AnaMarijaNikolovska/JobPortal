@@ -12,7 +12,7 @@ public interface JobPostService {
     List<JobPost> findAllJobPosts();
     Optional<JobPost> findOneJobPost(Long id);
     List<JobPost> findAllJobPostsByCategory(String categoryId);
-    List<JobPost> findAllJobPostsByMainCategory(String mainCategory);
+    List<JobPost> findAllJobPostsByIndustry(String industry);
     JobPost addJobPost(JobPostDto jobPostDto, MultipartFile picture) throws IOException;
     JobPost editJobPost(Long id, JobPostDto jobPostDto,MultipartFile picture) throws IOException;
     void deleteJobPost(Long id);

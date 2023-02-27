@@ -1,6 +1,6 @@
 package com.example.JobPortal.model.enums;
 
-public enum MainCategory {
+public enum Industry {
     Informatika,
     Ekonomija,
     Pravo,

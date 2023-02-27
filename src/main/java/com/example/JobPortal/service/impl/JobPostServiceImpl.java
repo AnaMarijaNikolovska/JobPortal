@@ -39,8 +39,8 @@ public class JobPostServiceImpl implements JobPostService {
     }
 
     @Override
-    public List<JobPost> findAllJobPostsByMainCategory(String mainCategory) {
-        return jobPostRepository.findAllJobPostsByMainCategory(mainCategory);
+    public List<JobPost> findAllJobPostsByIndustry(String industry) {
+        return jobPostRepository.findAllJobPostsByIndustry(industry);
     }
 
     @Override

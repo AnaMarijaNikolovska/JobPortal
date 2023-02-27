@@ -10,7 +10,7 @@ public interface CategoryService {
 
     List<Category> getAllCategory();
 
-    List<Category> getAllByMainCategory(String mainCategory);
+    List<Category> findAllCategoriesByIndustry(String industry);
 
     Optional<Category> getOneCategory(Long id);
 

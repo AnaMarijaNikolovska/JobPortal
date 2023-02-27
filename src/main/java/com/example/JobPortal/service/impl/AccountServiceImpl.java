@@ -34,8 +34,8 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public Optional<Account> getAccountByUsernameAndPassword(LogInDto loginDto) {
-        return accountRepository.getByUsernameAndPassword(loginDto.getUsername(), loginDto.getPassword());
+    public Optional<Account> getAccountByUsername(String username) {
+        return accountRepository.findByUsername(username);
     }
 
     @Override
@@ -73,7 +73,8 @@ public class AccountServiceImpl implements AccountService {
     //TODO
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-//        Account account = accountRepository.getByUsernameAndPassword(username,password)
+        //TODO
+//        Account account = accountRepository.getByUsername(username)
 //                .orElseGet(() -> accountRepository.findByEmail(mail)
 //                        .orElseThrow(() -> new UsernameNotFoundException("User Name is not Found")));
 //

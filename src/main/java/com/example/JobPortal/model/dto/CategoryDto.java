@@ -8,8 +8,6 @@ import javax.validation.constraints.NotBlank;
 public class CategoryDto {
     @NotBlank
     String name;
-    @NotBlank
     String description;
-    @NotBlank
     String mainCategory;
 }

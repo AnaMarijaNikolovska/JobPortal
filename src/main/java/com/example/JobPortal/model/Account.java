@@ -1,5 +1,6 @@
 package com.example.JobPortal.model;
 
+import com.example.JobPortal.model.enums.Role;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -27,6 +28,9 @@ public class Account implements UserDetails {
     String phoneNumber;
     String companyName;
     String since;
+
+    @Enumerated(value = EnumType.STRING)
+    Role role;
 
     @Lob
     byte[] picture;
