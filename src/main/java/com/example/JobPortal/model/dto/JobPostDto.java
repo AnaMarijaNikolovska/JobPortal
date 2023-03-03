@@ -9,7 +9,6 @@ import javax.validation.constraints.NotNull;
 public class JobPostDto {
     @NotBlank
     String title;
-
     @NotBlank
     String position;
     String description;
@@ -19,5 +18,6 @@ public class JobPostDto {
     @NotNull
     Long categoryId;
     Long mainCategoryId;
+    String salery;
 
 }

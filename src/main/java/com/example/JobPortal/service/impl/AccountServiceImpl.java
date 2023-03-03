@@ -28,10 +28,10 @@ public class AccountServiceImpl implements AccountService {
         return accountRepository.findAll();
     }
 
-    @Override
-    public Optional<Account> getOneAccount(String username) {
-        return accountRepository.findById(username);
-    }
+//    @Override
+//    public Optional<Account> getOneAccount(String username) {
+//        return accountRepository.findById(username);
+//    }
 
     @Override
     public Optional<Account> getAccountByUsername(String username) {
@@ -51,7 +51,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public Account editAccount(AccountDto accountDto, String username,MultipartFile picture) throws IOException {
-        Optional<Account> optionalAccount = getOneAccount(username);
+        Optional<Account> optionalAccount = accountRepository.findByUsername(username);
 
         if (optionalAccount.isPresent()) {
             Account account = optionalAccount.get();
@@ -73,12 +73,11 @@ public class AccountServiceImpl implements AccountService {
     //TODO
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+        // param for function: String username,String mail
         //TODO
-//        Account account = accountRepository.getByUsername(username)
+//        Account account = accountRepository.findByUsername(username)
 //                .orElseGet(() -> accountRepository.findByEmail(mail)
 //                        .orElseThrow(() -> new UsernameNotFoundException("User Name is not Found")));
-//
-//        AuthorityUtils.createAuthorityList(String.valueOf(account.);
         return null;
     }
 
@@ -93,4 +92,5 @@ public class AccountServiceImpl implements AccountService {
         account.setCompanyName(accountDto.getCompanyName());
         account.setSince(accountDto.getSince());
     }
+
 }

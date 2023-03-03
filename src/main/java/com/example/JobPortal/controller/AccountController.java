@@ -8,6 +8,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/account")
@@ -24,6 +25,11 @@ public class AccountController {
     }
 
     //TODO implement more functions
+
+    @GetMapping("/{username}")
+    Optional<Account> findByUsername(@PathVariable String username){
+        return accountService.getAccountByUsername(username);
+    }
 
     @PostMapping
     Account createAccount(@RequestBody AccountDto accountDto, @RequestPart MultipartFile picture) throws IOException {

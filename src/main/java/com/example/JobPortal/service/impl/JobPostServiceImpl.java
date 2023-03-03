@@ -84,5 +84,6 @@ public class JobPostServiceImpl implements JobPostService {
         jobPost.setPosition(jobPostDto.getPosition());
         jobPost.setQualifications(jobPostDto.getQualifications());
         jobPost.setNumberOfOpenPositions(jobPostDto.getNumberOfOpenPositions());
+        jobPost.setSalery(jobPostDto.getSalery());
     }
 }

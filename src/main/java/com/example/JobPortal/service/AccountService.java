@@ -14,7 +14,7 @@ public interface AccountService extends UserDetailsService {
     List<Account> getAllAccounts();
 
     //TODO maybe "getOneAccount" is same as "getAccountByUsername"
-    Optional<Account> getOneAccount(String username);
+//    Optional<Account> getOneAccount(String username);
 
     Optional<Account> getAccountByUsername(String username);
 

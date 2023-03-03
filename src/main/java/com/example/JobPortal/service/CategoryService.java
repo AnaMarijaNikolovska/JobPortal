@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public interface CategoryService {
 
-    List<Category> getAllCategory();
+    List<Category> getAllCategories();
 
     List<Category> findAllCategoriesByIndustry(String industry);
 

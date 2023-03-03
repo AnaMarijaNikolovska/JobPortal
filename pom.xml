@@ -89,6 +89,14 @@
 			<artifactId>javax.mail-api</artifactId>
 			<version>1.6.2</version>
 		</dependency>
+
+<!--		 used to store the CV files that are uploaded by job applicants-->
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-s3</artifactId>
+			<version>1.12.38</version>
+		</dependency>
+
 	</dependencies>
 
 

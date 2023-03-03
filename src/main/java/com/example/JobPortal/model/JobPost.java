@@ -1,11 +1,13 @@
 package com.example.JobPortal.model;
 
 import com.example.JobPortal.model.enums.Industry;
+import com.example.JobPortal.model.enums.JobType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -21,10 +23,15 @@ public class JobPost {
     String date;
     String qualifications;
     Integer numberOfOpenPositions;
-    @ManyToOne
-    Category category;
+    String salery;
     @Lob
     byte[] picture;
+    @ManyToOne
+    Category category;
+    @OneToMany
+    List<Application> applications;
     @Enumerated(value = EnumType.STRING)
     Industry industry;
+    @Enumerated(value = EnumType.STRING)
+    JobType jobType;
 }
